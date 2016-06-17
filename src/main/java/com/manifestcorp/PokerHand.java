@@ -139,6 +139,7 @@ public class PokerHand {
 		}
 	}
 
+	
 	public String cardFace(int i) {
 		return listOfCards.get(i).getFace();
 	}
