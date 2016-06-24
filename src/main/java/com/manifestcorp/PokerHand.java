@@ -4,6 +4,15 @@ import java.util.*;
 
 public class PokerHand {
 	
+	private static final String HIGH_CARD = "High Card";
+	private static final String ONE_PAIR = "One Pair";
+	private static final String TWO_PAIR = "Two Pair";
+	private static final String THREE_OF_A_KIND = "Three of a Kind";
+	private static final String STRAIGHT = "Straight";
+	private static final String FLUSH = "Flush";
+	private static final String FULL_HOUSE = "Full House";
+	private static final String FOUR_OF_A_KIND = "Four of a Kind";
+	private static final String STRAIGHT_FLUSH = "Straight Flush";
 	private List<Card> listOfCards = new ArrayList<Card>();
 	private String handType;
 	private Integer handTypeValue;
@@ -30,39 +39,39 @@ public class PokerHand {
 	private void setBestHandType() {
 		if (isStraightFlush()) {
 			handTypeValue = (Integer)9;
-			handType = "Straight Flush";
+			handType = STRAIGHT_FLUSH;
 		}
 		else if (isFourOfAKind()) {
 			handTypeValue = (Integer)8;
-			handType = "Four of a Kind";
+			handType = FOUR_OF_A_KIND;
 		}
 		else if (isFullHouse()) {
 			handTypeValue = (Integer)7;
-			handType = "Full House";
+			handType = FULL_HOUSE;
 		}
 		else if (isFlush()) {
 			handTypeValue = (Integer)6;
-			handType = "Flush";
+			handType = FLUSH;
 		}
 		else if (isStraight()) {
 			handTypeValue = (Integer)5;
-			handType = "Straight";
+			handType = STRAIGHT;
 		}
 		else if (isThreeOfAKind()) {
 			handTypeValue = (Integer)4;
-			handType = "Three of a Kind";
+			handType = THREE_OF_A_KIND;
 		}
 		else if (isTwoPair()) {
 			handTypeValue = (Integer)3;
-			handType = "Two Pair";
+			handType = TWO_PAIR;
 		}
 		else if (isOnePair()) {
 			handTypeValue = (Integer)2;
-			handType = "One Pair";
+			handType = ONE_PAIR;
 		}
 		else {
 			handTypeValue = (Integer)1;
-			handType = "High Card";
+			handType = HIGH_CARD;
 		}
 	}
 
